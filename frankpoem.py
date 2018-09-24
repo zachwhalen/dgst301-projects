@@ -14,6 +14,7 @@ blob = TextBlob(text)
 # Create two empty lists for storing adjectives and nouns
 adjectives = []
 nouns = []
+verbs = []
 
 # TextBlob parses the words and labels them with a part-of-speech tag.
 # This code loops through the whole text, checks for adjectives and nouns
@@ -24,6 +25,8 @@ for word,pos in blob.tags:
         adjectives.append(word)
     if (pos == 'NN'):
         nouns.append(word)
+    if (pos == 'VB'):
+        verbs.append(word)
 
 # This generates an eight-line poem by pairing a random adjective 
 # with a random noun eight times and printing the pairs.
@@ -33,4 +36,5 @@ for i in range(8):
     n1 = random.choice(nouns)
     n2 = random.choice(nouns)
     n3 = random.choice(nouns)
-    print(n1 + " " + a1 + " " +  n2  + " " + a2  + " " + n3)
+    vb = random.choice(verbs)
+    print(n1 + " " + a1 + " " +  vb  + " " + a2  + " " + n3)
