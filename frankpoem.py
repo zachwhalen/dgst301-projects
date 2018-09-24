@@ -5,6 +5,7 @@ from textblob import TextBlob
 # in the same directory as my python notebook or script.
 # Replace "frankenstein.txt" with your file's name.
 # The text file's contents are stored in the variable "text"
+# These are comments
 with open('frankenstein.txt', 'r') as file:
     text = file.read()
 
